@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <%- include('./partials/style.ejs') %>
+</head>
+<body>
+ <%- include('./partials/nav.ejs') %>
+
+<section class="container">
+
+   <div class="welcome">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsa molestias sunt maxime rerum harum optio cupiditate placeat omnis adipisci quod nihil architecto cumque quidem recusandae quas, nobis, natus eius.</p>
+     <button>
+       CREATE
+     </button>
+    </div>
+
+<div class="trend">
+  <div class="s-blog" id="s-1">
+  <p>Lorem autem enim consectetur cumque, cum corporis magni. Vitae atque doloremque laboriosam dignissimos?</p>
+  </div>
+  <div class="s-blog" id="s-2">
+    <p>Lorem autem enim consectetur cumque, cum corporis magni. Vitae atque doloremque laboriosam dignissimos?</p>
+  
+  </div>
+  <div class="s-blog" id="s-3">
+  <p>Lorem autem enim consectetur cumque, cum corporis magni. Vitae atque doloremque laboriosam dignissimos?</p>
+    
+  </div>
+</div>
+
+  <!-- <img src="./img/joyful-black-author-works-writing-new-book-readers_273609-28047 copy.webp" alt=""> -->
+
+</section>
+<section class="subscribe">
+  <p><b>Joins Us!</b><br>
+    get news update from us
+  </p>
+  <form action="/" method="post">
+    <input type="text" name="name" id="" placeholder="input your name">
+    <input type="email" name="email" id="email" placeholder="input your email">
+    <button>subcribe</button>
+  </form>
+</section>
+  <section class="blog-con">
+    <div class="blogs">
+      <% blog.forEach(blogs =>{ %>
+      <a href="./blogs/<%= blogs.id %>">
+        <div class="blog-cards">
+          <div class="blog-img">
+        <img src=" <%= blogs.image %>" alt="">
+      </div>
+      <p><b><%= blogs.caption %></b><br>
+      <%= blogs.snipnet %>
+      </p>
+    
+        </div>
+      </a>
+     <% }) %>
+    </div>
+   
+   <aside>
+     <div class="search">
+ 
+       <input type="search" placeholder="search..."> <img src="./img/bx-search.svg" alt="">
+    
+     </div>
+     <div class="categories">
+       <h3>Categories</h3>
+       <ul>
+         <li>Javascript</li>
+         <li>React js</li>
+         <li>CSS</li>
+         <li>Node js</li>
+       </ul>
+     </div>
+     <div class="top">
+       <h3>TRENDS</h3>
+       <div class="trends">
+      <div class="BOXES">
+        <P>NODE JS</P>
+      </div>
+      <div class="BOXES">
+        <P>NODE JS</P>
+      </div>
+      <div class="BOXES">
+        <P>NODE JS</P>
+      </div>
+      <div class="BOXES">
+        <P>NODE JS</P>
+      </div>
+    </div>
+     </div>
+   </aside>
+  </section>
+  <div class="oops">
+    <h2>OOPS YOU HAVE CONSUMED ALL BLOGS FOR NOW😢</h2>
+  </div>
+ <%- include('./partials/footer.ejs') %>
+</body>
+</html>
