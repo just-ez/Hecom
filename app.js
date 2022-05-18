@@ -10,6 +10,7 @@ const formidable = require('formidable')
 // our DB
 const mongoose = require('mongoose')
 require('dotenv').config();
+
 const Blog = require('./models/Blog')
 const User = require('./models/user')
 
@@ -35,7 +36,7 @@ app.use(express.json())
  
 
 
- 
+  
 // blog routes
 
 app.post('/',(req,res)=>{
