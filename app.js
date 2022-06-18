@@ -17,14 +17,11 @@ const User = require('./models/user')
 
 
 
-// importing cloudinary
-const cloudinary = require('cloudinary')
-// configing cloudinary
-cloudinary.config({ 
-   cloud_name: 'eos-tech', 
-   api_key: '641824977648761', 
-   api_secret: '3-czwZ4QV5Rth6X8bivODTst8Lg' 
- });
+
+ 
+
+  
+
 
 // our views Engine
 app.set('view engine', 'ejs')
@@ -32,7 +29,10 @@ app.use(express.static('views'))
 app.use(express.json())
  app.use(urlencoded({extended: true}))
 
-
+ app.use(cors({
+   origin: '*',
+   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
  
 
 
@@ -57,8 +57,9 @@ app.get('/blogs',(req,res)=>{
 
  app.get('/blogs/:id', (req,res)=>{
     let id = req.params.id
+  
     Blog.findById(id).then((result)=>{
-       res.render('blog_page', {blog: result}) 
+       res.render('blog_page', {blog: result},) 
     })
  })   
 
@@ -72,34 +73,31 @@ app.get('/contact',(req,res)=>{
 })
 
 // create route
+
+app.post('/blogs/create', (req,res)=>{ 
+    
+   const blog = new Blog(req.body) 
+   blog.save().then((result)=>{
+      console.log(`${result.body}`);
+      
+   })
+   .catch((err)=> console.log(err))
+    res.redirect('/blogs')  
+
+}) 
 app.get('/create',(req,res)=>{
+ 
    res.render('createBlog') 
 
 })
-app.post('/blogs/create', (req,res)=>{ 
 
-   
-   const blog = new Blog(req.body) ;
-   blog.save().then((result)=>{
-      console.log(`${result.image}`);
- 
-//       cloudinary.v2.uploader.upload(``, 
-//   { public_id: 'image' },  
-//   function(error, result) {console.log(result); });
-       
-      res.redirect('/blogs')   
-        
-   })
-   .catch((err)=> console.log(err))
-    
-
-}) 
-
-
-app.get('/404',(req,res)=>{ 
+app.post('/contact' ,(req,res)=>{
+   res.send('API not ready')
+})
+app.get('/404',(req,res)=>{  
    res.render('404')
 })    
-console.log(process.env.DBuri);
+
 
 let port = process.env.PORT || 8000
 // connecting to db

@@ -2,10 +2,10 @@
 
   let Schema = mongoose.Schema;
   let BlogSchema = new Schema ({
-      // image: {
-      //     type: String,
-      //     required: true
-      // },
+       image: {
+        type: String,
+           required: true
+       },
      caption: {
           type: String,
           required: true

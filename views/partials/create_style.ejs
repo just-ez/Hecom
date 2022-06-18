@@ -1,49 +1,58 @@
 <style>
    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@300;400&display=swap');
     section {
-      
-  
+      max-width: 100%;
+  box-sizing: border-box;
     }
     section form {
-        width: 70%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
+       flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 20px;
+        
     }
-    input {
-        width: 100%;
-        padding: 10px;
-        margin: 20px;
-    }
-    textarea {
-        padding: 50px;
-        border: 1px solid black;
-        width: 90%;
-        margin: 20px;
-    }
-    .snipet {
+    
+    .inputs {
         width: 100%;
         display: flex;
-        align-items: center;
         justify-content: space-between;
     }
-    #img_file {
+    .inputs div {
+        width: 50%;
+    }
+    input {
         width: 90%;
-        border: none;
+        padding: 10px;
+        margin: 10px;
+    }
+    textarea {
+        padding: 30px;
+        border: 3px solid black;
+        width: 90%;
+        height: 70vh;
+    }
+    #create {
+        margin: 10px;
+        width: 80%;
         background-color: black;
-        color: white;
-        padding: 20px;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    #img_file {
+      height: 100px;
+      padding: 0px;
+      width: 90%;
+      margin: 8px;
     }
     .upload {
-     width: 30%;
-     height: 500px;
+    
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid black;
-        border-style: dashed;
+flex-direction: column;
         margin: 20px;
     }
     .page-con {
@@ -77,7 +86,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-      overflow: scroll;
+      overflow-y: scroll;
         font-size: 14px;
         font-family: cursive;  
         margin-bottom: 10px;
@@ -110,5 +119,45 @@
         font-size: 14px;
         font-family: 'Quicksand', sans-serif;
         text-orientation: sideways;
+    }
+    .contact_con {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: bisque;
+    }
+    .contact {
+        width: 100%;
+        display: flex;
+        justify-content: space-between ;
+        border-radius: 10px;
+        margin: 20px;
+        /* box-shadow: 1px 1px 10px 1px rgb(121, 118, 118); */
+    }
+    .contact-img {
+        width: 50%;
+        height: auto;
+        background-image: url(./img/serious-curly-haired-young-woman-winks-eye-focuses-something-holds-pen-opened-notebook-makes-notes-sits-lotus-pose-wears-green-jumper-jeans-against-urban-buildings-prepares-essay_273609-59920.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #contact {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+    }
+    .num_mail {
+        display: flex;
+        width: 100%;
+    }
+    #contact textarea {
+        width: 90%;
+        height: 100px;
+        padding: 10px;
     }
 </style>

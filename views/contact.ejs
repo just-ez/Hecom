@@ -5,11 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include('./partials/create_style.ejs') %>
     <%- include('./partials/style.ejs') %>
 </head>
 <body>
     <%- include('./partials/nav.ejs') %>
-    <p>conatact page</p>
+    <div class="contact_con">
+   <div class="contact">
+       <div class="contact-img">
+
+       </div>
+       <form action="/contact" method="post" id="contact">
+           <h2>Contact Us</h2>
+       <input type="text" name="name" id="" placeholder="your full name.." required>
+       <div class="num_mail">
+       <input type="number" name="number" id="" placeholder="your phone number.." required minlength="7" maxlength="11" >
+       <input type="email" name="email" id="" placeholder="your email.." required>
+    </div>
+       <textarea name="message" id="" cols="30" rows="10" placeholder="input your message here.." required></textarea>
+       <button id="create">submit</button>
+       </form>
+   </div>
+</div>
     <%- include('./partials/footer.ejs') %>
 </body>
 </html>
