@@ -6,13 +6,13 @@ const app = express()
 const { urlencoded } = require('express')
 const fs = require('fs')
 const formidable = require('formidable')
-
+const cors = require('cors')
 // our DB
 const mongoose = require('mongoose')
 require('dotenv').config();
 
-const Blog = require('./models/Blog')
-const User = require('./models/user')
+const Blog = require('./files/models/Blog')
+const User = require('./files/models/user')
 
 
 
