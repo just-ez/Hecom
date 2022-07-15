@@ -15,6 +15,10 @@
         align-items: center;
         justify-content: space-around;
         font-family: 'Dancing Script', cursive;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        border-bottom: 1px solid black;
     }
   .navHead, .navHead a {
       display: flex;
@@ -22,14 +26,14 @@
       text-decoration: none;
  color: rgb(20, 19, 19);
       margin: 0;
-      font-size: 40px;
+      font-size: 20px;
   }
   .links, .links li, .links a {
  display: flex;
  align-items: center;
  list-style: none;
  margin: 10px;
- 
+
  text-decoration: none;
  color: rgb(20, 19, 19);
  font-size: 20px;
@@ -73,16 +77,16 @@
   .container {
       width: 100%;
       height: 80vh;
-      background-image: url( "./img/joyful-black-author-works-writing-new-book-readers_273609-28047 copy.webp");
+      background: linear-gradient(rgba(0, 0, 0, 0.279),rgba(0, 0, 0, 0.296)), rgba(249, 181, 93, 0.838);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       position: relative;
-      z-index: 1;
+     z-index: -1;
       overflow: hidden;
   }
   .container::after {
@@ -94,26 +98,21 @@
   }
   .welcome button {
       width: 100px;
-      
       padding: 20px;
      border: 1px solid black;
      border-radius: 10px;
      background-color: transparent;
   }
   .welcome {
-      width: 80%;
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
       font-size: 18px;
-      font-family:  cursive;
-      color: #fff;
+      color: black;
       position: relative;
-      margin-top: 20px;
       animation-name: welcome;
-      animation-duration: 4s;
+      animation-duration: 2s;
   }
   @keyframes welcome{
    0% {
@@ -125,62 +124,17 @@
   }
 .trend {
     width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+ font-size: 6em;
+ padding-left: 10px;
 }
-.s-blog {
-    width: 40%;
-    height: 200px;
-    margin: 50px;
-    margin-bottom: 100px;
-   display: flex;
-   align-items: flex-end;
-   justify-content: baseline;
-   color: #fff;
-   font-family: 'Dancing Script', cursive;
-  position: relative;
-   animation-name: s-blog;
-   animation-duration: 6s;
-   
-}
-@keyframes s-blog {
- 0% {
-     left: 1000px;
- }
-50% {
-    left: 0;
-}
-}
-.s-blog:hover {
-    cursor: pointer;
-  transform: scale(1.2);
-}
-#s-1 {
-    background-image: url(./img/serious-curly-haired-woman-wears-green-sweater-jeans-smartwatch-makes-notes-notebook-sits-outdoors-city-centre-against-modern-glass-skyscrapers-puts-down-ideas-university-course_273609-59917.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-#s-2 {
-    background-image: url(./img/young-millennial-student-searches-information-homework-writes-down-necessary-content-textbook-prepare-project-it-topic_273609-38712.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-#s-3 {
-    background-image: url(./img/serious-curly-haired-young-woman-winks-eye-focuses-something-holds-pen-opened-notebook-makes-notes-sits-lotus-pose-wears-green-jumper-jeans-against-urban-buildings-prepares-essay_273609-59920.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+
 
 .subscribe, .oops {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
-      font-family: 'Dancing Script', cursive;
+      font-family: monospace;
     padding: 20px;
     background-color: bisque;
 }

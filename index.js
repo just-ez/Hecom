@@ -63,7 +63,7 @@ app.get('/blogs',(req,res)=>{
  })   
 
 
-// about routes
+// about routes 
 app.get('/about',(req,res)=>{  
    res.render('about')
 })
@@ -92,8 +92,8 @@ app.get('/create',(req,res)=>{
 
 app.post('/contact' ,(req,res)=>{
    res.send('API not ready')
-})
-app.get('/404',(req,res)=>{  
+})              
+app.use('/',(req,res)=>{  
    res.render('404')
 })    
 
